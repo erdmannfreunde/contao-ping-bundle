@@ -66,13 +66,13 @@ class Plugin implements PluginInterface, EventSubscriberInterface
             ]);
 
             $event->getIO()->write(
-                sprintf('[OK] "%s"', $response->getContent()),
+                sprintf("\n\n[OK] \"%s\"\n\n", $response->getContent()),
                 true,
                 IOInterface::NORMAL
             );
         } catch (\Exception $e) {
             $event->getIO()->write(
-                sprintf('[ERROR] Error registering installation: %s', $e->getMessage()),
+                sprintf("\n\n[ERROR] Error registering installation: \"%s\"\n\n", $e->getMessage()),
                 true,
                 IOInterface::NORMAL
             );
