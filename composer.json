@@ -1,0 +1,26 @@
+{
+  "name": "erdmannfreunde/contao-ping-bundle",
+  "type": "contao-bundle",
+  "description": "Micro-Service to register E&F Contao Themes",
+  "keywords": [
+    "contao",
+    "theme",
+    "ping"
+  ],
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Dennis Erdmann",
+      "homepage": "https://erdmann-freunde.de"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "contao/core-bundle": "^5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "ErdmannFreunde\\Ping\\": "src/"
+    }
+  }
+}
