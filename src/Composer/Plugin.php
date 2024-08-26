@@ -9,8 +9,9 @@ use Composer\DependencyResolver\Operation\UpdateOperation;
 use Composer\EventDispatcher\EventSubscriberInterface;
 use Composer\Installer\PackageEvent;
 use Composer\Installer\PackageEvents;
-use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Yaml\Yaml;
+use Composer\IO\IOInterface;
+use Composer\Plugin\PluginInterface;
+use Composer\Util\Filesystem;
 use Symfony\Component\HttpClient\HttpClient;
 
 class Plugin implements PluginInterface, EventSubscriberInterface
