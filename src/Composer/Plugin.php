@@ -20,6 +20,25 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     {
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function activate(Composer $composer, IOInterface $io)
+    {
+        // nothing to do here
+    }
+
+    public function deactivate(Composer $composer, IOInterface $io): void
+    {
+        // Nothing to do here
+    }
+
+    public function uninstall(Composer $composer, IOInterface $io): void
+    {
+        // Nothing to do here
+    }
+
+    /** @noinspection PhpUnused */
     public function ping(PackageEvent $event)
     {
 
