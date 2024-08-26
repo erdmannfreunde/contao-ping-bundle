@@ -16,6 +16,8 @@ use Symfony\Component\HttpClient\HttpClient;
 
 class Plugin implements PluginInterface, EventSubscriberInterface
 {
+    private static bool $pingCalled = false;
+
     /**
      * {@inheritdoc}
      */
@@ -37,6 +39,11 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     /** @noinspection PhpUnused */
     public function ping(PackageEvent $event)
     {
+        if (self::$pingCalled) {
+            return;
+        }
+
+        self::$pingCalled = true; 
 
         $packageName = $event->getComposer()->getPackage()->getName() ?? 'not found';
         $packageVersion = $event->getComposer()->getPackage()->getVersion() ?? 'not found';
