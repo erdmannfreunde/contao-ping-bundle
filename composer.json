@@ -22,5 +22,8 @@
     "psr-4": {
       "ErdmannFreunde\\Ping\\": "src/"
     }
+  },
+  "extra": {
+    "class": "ErdmannFreunde\\Ping\\Composer\\Plugin"
   }
 }
