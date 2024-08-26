@@ -16,10 +16,6 @@ use Symfony\Component\HttpClient\HttpClient;
 
 class Plugin implements PluginInterface, EventSubscriberInterface
 {
-    public function __construct(private Filesystem $filesystem, private Config $config)
-    {
-    }
-
     /**
      * {@inheritdoc}
      */
